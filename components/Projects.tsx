@@ -1,11 +1,41 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { projects } from "@/lib/data";
+
+function highlightText(text: string, featured?: string) {
+  if (!featured || !text.includes(featured)) return text;
+  const idx = text.indexOf(featured);
+  return (
+    <>
+      {text.slice(0, idx)}
+      <span className="text-[#e6d100]">{featured}</span>
+      {text.slice(idx + featured.length)}
+    </>
+  );
+}
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const project = projects[currentIndex];
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const stopTimer = () => {
+    if (intervalRef.current !== null) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  const startTimer = () => {
+    stopTimer();
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((p) => (p + 1) % projects.length);
+    }, 4100);
+  };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { startTimer(); return stopTimer; }, []);
 
   const prev = () => setCurrentIndex((p) => (p - 1 + projects.length) % projects.length);
   const next = () => setCurrentIndex((p) => (p + 1) % projects.length);
@@ -13,25 +43,25 @@ export default function Projects() {
   const touchStartX = useRef<number>(0);
   const handleTouchStart = (e: React.TouchEvent<HTMLElement>) => {
     touchStartX.current = e.touches[0].clientX;
+    stopTimer();
   };
   const handleTouchEnd = (e: React.TouchEvent<HTMLElement>) => {
     const delta = e.changedTouches[0].clientX - touchStartX.current;
     if (delta > 50) prev();
     else if (delta < -50) next();
+    startTimer();
   };
 
   return (
     <div id="projects" className="flex flex-col md:flex-row min-h-screen">
       {/* Left Column (30%) */}
-      <section className="relative w-full md:w-[30%] bg-[#00489f] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
-        {/* เพิ่ม relative และ z-10 เพื่อดันข้อความขึ้นมาเลเยอร์บน */}
+      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         <div className="vertical-text relative z-10">
           <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">
             PROJECTS
           </h2>
         </div>
 
-        {/* เพิ่ม z-0 เพื่อส่งเลข 02 ลงไปอยู่เลเยอร์ล่างสุดด้านหลังข้อความ */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
           <span className="font-headline-xl text-[180px] text-[#4FC3F7] opacity-20 leading-none">
             02
@@ -39,24 +69,21 @@ export default function Projects() {
         </div>
 
         <div className="absolute bottom-10 left-10 z-10">
-          <p className="font-label-caps text-label-caps text-[#FFFFFF] text-[14px]">PROJECT / 2026</p>
+          <p className="font-label-caps text-[#FFFFFF] tracking-widest uppercase text-[14px]">PROJECT / 2026</p>
         </div>
       </section>
-
-      {/* Cyan Divider */}
-      <div className="hidden md:block w-[2px] bg-[#4fc3f7] self-stretch shadow-[0_0_15px_rgba(79,195,247,0.3)]" />
 
       {/* Right Column (70%) */}
       <section className="w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col overflow-hidden">
         {/* Section Header */}
         <div className="px-4 sm:px-8 md:px-16 pt-8 md:pt-16 pb-4 flex items-start justify-between">
           <div>
-            <span className="font-label-caps text-label-caps text-[#4fc3f7] tracking-[0.3em] text-[16px]">
+            <span className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[16px]">
               SELECTED WORK
             </span>
             <div className="h-[1px] w-12 bg-[#4fc3f7] mt-2" />
           </div>
-          <span className="font-label-caps text-label-caps text-[#889299]">
+          <span className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[16px]">
             {String(currentIndex + 1).padStart(2, "0")} /{" "}
             {String(projects.length).padStart(2, "0")}
           </span>
@@ -75,6 +102,8 @@ export default function Projects() {
           {/* Card */}
           <article
             className="flex-1 min-w-0 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col min-h-[420px]"
+            onMouseEnter={stopTimer}
+            onMouseLeave={startTimer}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
@@ -94,16 +123,16 @@ export default function Projects() {
             </h3>
 
             {/* Description */}
-            <p className="text-[#bdc8d0] text-[18px] leading-relaxed mb-5 max-w-2xl">
-              {project.description}
+            <p className="font-body-md text-[#bdc8d0] text-[18px] leading-relaxed mb-5 max-w-2xl">
+              {highlightText(project.description, project.featuredHighlight)}
             </p>
 
             {/* Highlights */}
             <ul className="space-y-2 mb-6">
               {project.highlights.map((highlight, i) => (
-                <li key={i} className="flex gap-3 text-[18px]">
+                <li key={i} className="font-body-md flex gap-3 text-[18px] text-[#bdc8d0]">
                   <span className="text-[#4fc3f7] shrink-0 mt-0.5">→</span>
-                  <span className="text-[#bdc8d0]">{highlight}</span>
+                  <span className="text-[#bdc8d0]">{highlightText(highlight, project.featuredHighlight)}</span>
                 </li>
               ))}
             </ul>

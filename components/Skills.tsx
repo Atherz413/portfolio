@@ -8,7 +8,7 @@ export default function Skills() {
       <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         {/* เพิ่ม relative และ z-10 เพื่อดันข้อความ SKILLS ขึ้นมาเลเยอร์บนสุด */}
         <div className="vertical-text relative z-10">
-          <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none uppercase">
+          <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">
             SKILLS
           </h2>
         </div>
@@ -35,7 +35,7 @@ export default function Skills() {
               <div key={group.category} className={group.category === "Martech" ? "sm:col-span-2" : undefined}>
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-2 h-2 bg-[#4fc3f7] shrink-0" />
-                  <span className="font-label-caps text-[#4fc3f7] uppercase tracking-widest text-[20px]">{group.category.toUpperCase()}</span>
+                  <span className={`font-label-caps uppercase tracking-widest text-[20px] ${group.category === "Backend" ? "text-[#e6d100]" : "text-[#4fc3f7]"}`}>{group.category.toUpperCase()}</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (

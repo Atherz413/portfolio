@@ -9,7 +9,7 @@ export default function About() {
       <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         {/* เพิ่ม relative และ z-10 เพื่อดันข้อความ ABOUT ขึ้นมาเลเยอร์บนสุด */}
         <div className="vertical-text relative z-10">
-          <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none uppercase">
+          <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">
             ABOUT
           </h2>
         </div>
@@ -40,13 +40,24 @@ export default function About() {
         </div>
         <div className="max-w-4xl flex flex-col gap-12">
           <div>
-            <span className="font-label-caps text-[#4fc3f7] tracking-[0.4em] uppercase text-[16px]">WHO I AM</span>
-            <div className="w-16 h-[1px] bg-[#4fc3f7] mt-4" />
+            <span className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[16px]">WHO I AM</span>
+            <div className="h-[1px] w-12 bg-[#4fc3f7] mt-2" />
           </div>
           <div className="space-y-8 max-w-2xl">
-            {about.story.map((paragraph, i) => (
-              <p key={i} className="text-[#bdc8d0] leading-relaxed text-[18px]">{paragraph}</p>
-            ))}
+            {about.story.map((paragraph, i) => {
+              const PHRASE = "backend engineering in everything but name";
+              const idx = paragraph.indexOf(PHRASE);
+              if (idx === -1) {
+                return <p key={i} className="font-body-md text-[#bdc8d0] leading-relaxed text-[18px]">{paragraph}</p>;
+              }
+              return (
+                <p key={i} className="font-body-md text-[#bdc8d0] leading-relaxed text-[18px]">
+                  {paragraph.slice(0, idx)}
+                  <span className="text-[#e6d100]">{PHRASE}</span>
+                  {paragraph.slice(idx + PHRASE.length)}
+                </p>
+              );
+            })}
           </div>
           <div className="flex flex-wrap gap-4">
             {about.values.map((value) => (

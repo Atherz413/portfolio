@@ -10,11 +10,11 @@ export default function Hero() {
   const lastNameAccent = lastName.slice(-3);
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen pt-[48px]">
+    <div id="hero" className="flex flex-col md:flex-row min-h-screen pt-[48px]">
       {/* Left Column (30%) */}
-      <section className="relative w-full md:w-[30%] bg-[#00489f] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         {/* 1. ใส่ z-10 ให้เลเยอร์ข้อความปกติ */}
-        <div className="vertical-text z-10">
+        <div className="vertical-text relative z-10">
             <h1 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">
                 PORTFOLIO
                 </h1>
@@ -26,9 +26,6 @@ export default function Hero() {
         </div>
      </section>
 
-      {/* Vertical Divider */}
-      <div className="hidden md:block w-[2px] bg-primary-container shadow-[0_0_15px_rgba(79,195,247,0.3)]" />
-
       {/* Right Column (70%) */}
       <section
         className="relative w-full md:w-[70%] bg-surface-container-lowest grid-pattern flex flex-col justify-start pt-10 px-6 md:pt-16 md:px-16"
@@ -38,10 +35,10 @@ export default function Hero() {
         <div className="max-w-3xl z-10">
           {/* Role Label */}
           <div className="mb-6">
-            <span className="font-label-caps text-label-caps text-primary-container tracking-[0.1em] md:tracking-[0.3em] text-[16px]">
-              BACKEND / FULL STACK DEVELOPER
+            <span className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[16px]">
+              BACKEND / SOFTWARE ENGINEER
             </span>
-            <div className="h-[1px] w-12 bg-primary-container mt-2" />
+            <div className="h-[1px] w-12 bg-[#4fc3f7] mt-2" />
           </div>
 
           {/* Name */}
@@ -86,9 +83,9 @@ export default function Hero() {
             <a
               href={siteConfig.resume}
               download
-              className="skew-button skew-x-[-15deg] border-2 border-outline text-outline font-label-caps px-8 py-3 font-bold hover:text-on-surface hover:border-on-surface"
+              className="skew-button skew-x-[-15deg] border-2 border-outline font-label-caps px-8 py-3 font-bold hover:border-on-surface"
             >
-              RESUME PDF
+              <span className="text-[#e6d100]">RESUME PDF</span>
             </a>
           </div>
         </div>
