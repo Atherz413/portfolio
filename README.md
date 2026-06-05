@@ -73,5 +73,3 @@ Open [http://localhost:3000](http://localhost:3000)
 
 - Add a **contact form** with server-side email sending (Resend or Nodemailer)
 - Add **page transitions** between sections
-- Deploy to **Vercel** and add live URL
-- Add **dark/light mode toggle** (design system already uses CSS variables — easy to wire up)
