@@ -35,7 +35,7 @@ export default function Projects() {
       <div className="hidden md:block w-[2px] bg-[#4fc3f7] self-stretch shadow-[0_0_15px_rgba(79,195,247,0.3)]" />
 
       {/* Right Column (70%) */}
-      <section className="w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col">
+      <section className="w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col overflow-hidden">
         {/* Section Header */}
         <div className="px-4 sm:px-8 md:px-16 pt-8 md:pt-16 pb-4 flex items-start justify-between">
           <div>
@@ -62,7 +62,7 @@ export default function Projects() {
 
           {/* Card */}
           <article
-            className="flex-1 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col min-h-[420px]"
+            className="flex-1 min-w-0 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col min-h-[420px]"
           >
             {/* Notched top-right corner */}
             <div className="absolute top-0 right-0 w-0 h-0 border-t-[24px] border-l-[24px] border-t-[#4fc3f7]/40 border-l-transparent pointer-events-none" />

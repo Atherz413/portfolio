@@ -47,7 +47,7 @@ export default function Hero() {
           </div>
 
           {/* Name */}
-          <h2 className="font-headline-lg mb-8 uppercase leading-none text-[36px] sm:text-[48px] md:text-headline-xl">
+          <h2 className="font-headline-lg mb-8 uppercase leading-none text-[28px] sm:text-[42px] md:text-headline-xl">
             <span className="block text-on-surface font-bold">{firstName}</span>
             <span className="block">
               <span className="text-on-surface font-bold">{lastNameBody}</span>
