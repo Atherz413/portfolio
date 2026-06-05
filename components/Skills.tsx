@@ -5,7 +5,7 @@ import { skills } from "@/lib/data";
 export default function Skills() {
   return (
     <div id="skills" className="flex flex-col md:flex-row md:items-stretch min-h-screen">
-      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+      <section className="relative w-full md:w-[30%] bg-[#070710] md:bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         {/* เพิ่ม relative และ z-10 เพื่อดันข้อความ SKILLS ขึ้นมาเลเยอร์บนสุด */}
         <div className="vertical-text relative z-10">
           <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">

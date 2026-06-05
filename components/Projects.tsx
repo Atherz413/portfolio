@@ -55,7 +55,7 @@ export default function Projects() {
   return (
     <div id="projects" className="flex flex-col md:flex-row min-h-screen">
       {/* Left Column (30%) */}
-      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+      <section className="relative w-full md:w-[30%] bg-[#070710] md:bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         <div className="vertical-text relative z-10">
           <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">
             PROJECTS

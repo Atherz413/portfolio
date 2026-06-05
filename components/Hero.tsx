@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <div id="hero" className="flex flex-col md:flex-row min-h-screen pt-[48px]">
       {/* Left Column (30%) */}
-      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+      <section className="relative w-full md:w-[30%] bg-[#070710] md:bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         {/* 1. ใส่ z-10 ให้เลเยอร์ข้อความปกติ */}
         <div className="vertical-text relative z-10">
             <h1 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">

@@ -101,6 +101,17 @@ html {
   transform: rotate(180deg);
 }
 
+@media (max-width: 767px) {
+  .vertical-text {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+}
+
 .diagonal-accent {
   background: repeating-linear-gradient(
     45deg,
