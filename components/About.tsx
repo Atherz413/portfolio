@@ -6,17 +6,21 @@ export default function About() {
   return (
     <div id="about" className="flex flex-col md:flex-row md:items-stretch min-h-screen">
       {/* Left Column */}
-      <section className="relative w-full md:w-[30%] bg-[#070710] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
-        <div className="vertical-text">
+      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+        {/* เพิ่ม relative และ z-10 เพื่อดันข้อความ ABOUT ขึ้นมาเลเยอร์บนสุด */}
+        <div className="vertical-text relative z-10">
           <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none uppercase">
             ABOUT
           </h2>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <span className="font-headline-xl text-[240px] text-[#4fc3f7] opacity-5 leading-none">04</span>
+        
+        {/* เพิ่ม z-0 เพื่อส่งเลข 04 ลงไปอยู่เลเยอร์ล่างสุดด้านหลังข้อความ */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+          <span className="font-headline-xl text-[180px] text-[#4FC3F7] opacity-20 leading-none">04</span>
         </div>
+
         <div className="absolute bottom-10 left-10 z-10">
-          <p className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[14px]">ABOUT / 2025</p>
+          <p className="font-label-caps text-[#FFFFFF] tracking-widest uppercase text-[14px]">ABOUT / 2026</p>
         </div>
       </section>
 
@@ -27,8 +31,13 @@ export default function About() {
           <div className="w-12 h-[1px] bg-[#4fc3f7]" />
           <div className="w-8 h-[1px] bg-[#4fc3f7]" />
         </div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 border border-[#4fc3f7]/20 translate-x-4 translate-y-4 hidden md:block" />
-        <div className="absolute bottom-20 right-20 w-32 h-32 border border-[#4fc3f7]/40 hidden md:block" />
+        <div className="absolute bottom-20 right-20 w-32 h-32 hidden md:block">
+            {/* กรอบหลัง (Ghost Frame) - มีเฉพาะเส้นขอบ เยื้องไปทางขวาและล่าง */}
+            <div className="absolute inset-0 border border-primary-container/20 translate-x-4 translate-y-4" />
+            
+            {/* รูปทรงหน้า (Filled Shape) - ถมสีฟ้าครามทึบทั้งหมด */}
+            <div className="absolute inset-0 bg-[#4FC3F7]" />
+        </div>
         <div className="max-w-4xl flex flex-col gap-12">
           <div>
             <span className="font-label-caps text-[#4fc3f7] tracking-[0.4em] uppercase text-[16px]">WHO I AM</span>

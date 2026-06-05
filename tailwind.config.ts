@@ -17,7 +17,7 @@ export default {
         "error": "#ffb4ab",
         "on-tertiary-fixed-variant": "#45455b",
         "on-error": "#690005",
-        "outline": "#889299",
+        "outline": "#e6d100",
         "on-surface-variant": "#bdc8d0",
         "surface-container-low": "#1a1a28",
         "surface-container-high": "#292937",

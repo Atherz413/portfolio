@@ -13,7 +13,7 @@ export default function Navbar() {
         className="hidden md:block text-white font-bold text-[18px]"
         style={{ fontFamily: "var(--font-space-mono)" }}
       >
-        Oam
+        OAM
       </span>
 
       <div className="flex items-center gap-8">
@@ -21,7 +21,7 @@ export default function Navbar() {
           <a
             key={href}
             href={href}
-            className="text-[18px] uppercase tracking-widest text-[#889299] hover:text-white transition-colors"
+            className="text-[18px] uppercase tracking-widest text-[#4FC3F7] hover:text-white transition-colors"
             style={{ fontFamily: "var(--font-space-mono)" }}
           >
             {label}

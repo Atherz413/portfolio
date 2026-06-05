@@ -12,21 +12,19 @@ export default function Hero() {
   return (
     <div className="flex flex-col md:flex-row min-h-screen pt-[48px]">
       {/* Left Column (30%) */}
-      <section className="relative w-full md:w-[30%] bg-[#070710] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
-        <div className="vertical-text">
-          <h1 className="font-headline-xl text-headline-xl text-on-surface tracking-tighter select-none glitch-text">
-            PORTFOLIO
-          </h1>
+      <section className="relative w-full md:w-[30%] bg-[#00489f] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+        {/* 1. ใส่ z-10 ให้เลเยอร์ข้อความปกติ */}
+        <div className="vertical-text z-10">
+            <h1 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">
+                PORTFOLIO
+                </h1>
         </div>
-
-        <div className="absolute bottom-10 left-10 z-10">
-          <p className="font-label-caps text-label-caps text-primary-container text-[14px]">PORTFOLIO / 2025</p>
+                
+        {/* 2. ใส่ z-0 ให้เลข 01 อยู่เลเยอร์ล่างสุด */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+            <span className="font-headline-xl text-[180px] text-[#4FC3F7] opacity-20 leading-none">01</span>
         </div>
-
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <span className="font-extrabold text-[220px] text-[#4fc3f7] opacity-5 leading-none tracking-tighter select-none pointer-events-none">01</span>
-        </div>
-      </section>
+     </section>
 
       {/* Vertical Divider */}
       <div className="hidden md:block w-[2px] bg-primary-container shadow-[0_0_15px_rgba(79,195,247,0.3)]" />
@@ -95,9 +93,14 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Ghost Frame */}
-        <div className="absolute bottom-20 right-20 w-32 h-32 border border-primary-container/20 translate-x-4 translate-y-4 hidden md:block" />
-        <div className="absolute bottom-20 right-20 w-32 h-32 border border-primary-container/40 hidden md:block" />
+        {/* Ghost Frame Setup */}
+        <div className="absolute bottom-20 right-20 w-32 h-32 hidden md:block">
+            {/* กรอบหลัง (Ghost Frame) - มีเฉพาะเส้นขอบ เยื้องไปทางขวาและล่าง */}
+            <div className="absolute inset-0 border border-primary-container/20 translate-x-4 translate-y-4" />
+
+            {/* รูปทรงหน้า (Filled Shape) - ถมสีฟ้าครามทึบทั้งหมด */}
+            <div className="absolute inset-0 bg-[#4FC3F7]" />
+        </div>
       </section>
     </div>
   );

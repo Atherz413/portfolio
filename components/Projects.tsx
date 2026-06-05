@@ -23,21 +23,23 @@ export default function Projects() {
   return (
     <div id="projects" className="flex flex-col md:flex-row min-h-screen">
       {/* Left Column (30%) */}
-      <section className="relative w-full md:w-[30%] bg-[#070710] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
-        <div className="vertical-text">
+      <section className="relative w-full md:w-[30%] bg-[#00489f] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+        {/* เพิ่ม relative และ z-10 เพื่อดันข้อความขึ้นมาเลเยอร์บน */}
+        <div className="vertical-text relative z-10">
           <h2 className="font-headline-xl text-headline-xl text-white tracking-tighter select-none">
             PROJECTS
           </h2>
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <span className="font-headline-xl text-[180px] text-[#4fc3f7] opacity-5 leading-none">
+        {/* เพิ่ม z-0 เพื่อส่งเลข 02 ลงไปอยู่เลเยอร์ล่างสุดด้านหลังข้อความ */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+          <span className="font-headline-xl text-[180px] text-[#4FC3F7] opacity-20 leading-none">
             02
           </span>
         </div>
 
         <div className="absolute bottom-10 left-10 z-10">
-          <p className="font-label-caps text-label-caps text-[#4fc3f7] text-[14px]">PROJECT / 2025</p>
+          <p className="font-label-caps text-label-caps text-[#FFFFFF] text-[14px]">PROJECT / 2026</p>
         </div>
       </section>
 
