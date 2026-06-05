@@ -40,7 +40,7 @@ export default function Skills() {
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <span key={item} className="px-4 py-2 border border-[#4fc3f7]/20 text-[#bdc8d0] font-label-caps uppercase hover:bg-[#4fc3f7]/10 hover:text-[#4fc3f7] transition-all cursor-default text-[14px] notch-tr">{item}</span>
+                    <span key={item} className="bg-[#4fc3f7]/10 px-3 py-1 text-[#4fc3f7] font-label-caps uppercase cursor-default text-[14px] tracking-widest">{item}</span>
                   ))}
                 </div>
               </div>
