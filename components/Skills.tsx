@@ -5,10 +5,10 @@ import { skills } from "@/lib/data";
 export default function Skills() {
   return (
     <div id="skills" className="flex flex-col md:flex-row md:items-stretch min-h-screen">
-      <section className="relative w-full md:w-[30%] bg-[#070710] md:bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         {/* เพิ่ม relative และ z-10 เพื่อดันข้อความ SKILLS ขึ้นมาเลเยอร์บนสุด */}
         <div className="vertical-text relative z-10">
-          <span className="block md:hidden font-label-caps text-[#FFFFFF] tracking-widest uppercase text-[14px]">03 — SKILLS / 2026</span>
+          <span className="block md:hidden font-label-caps text-[#FFFFFF] tracking-widest uppercase text-[45px]">SKILLS</span>
           <h2 className="hidden md:block font-headline-xl text-headline-xl text-white tracking-tighter select-none">
             SKILLS
           </h2>
@@ -16,7 +16,7 @@ export default function Skills() {
 
         {/* เพิ่ม z-0 เพื่อส่งเลข 03 ลงไปอยู่เลเยอร์ล่างสุดด้านหลังข้อความ */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-          <span className="font-headline-xl text-[180px] text-[#4FC3F7] opacity-20 leading-none">03</span>
+          <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4FC3F7] opacity-20 leading-none">03</span>
         </div>
 
         <div className="hidden md:block absolute bottom-10 left-10 z-10">

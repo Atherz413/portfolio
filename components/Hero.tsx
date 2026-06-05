@@ -12,10 +12,10 @@ export default function Hero() {
   return (
     <div id="hero" className="flex flex-col md:flex-row min-h-screen pt-[48px]">
       {/* Left Column (30%) */}
-      <section className="relative w-full md:w-[30%] bg-[#070710] md:bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
+      <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         {/* 1. ใส่ z-10 ให้เลเยอร์ข้อความปกติ */}
         <div className="vertical-text relative z-10">
-          <span className="block md:hidden font-label-caps text-[#FFFFFF] tracking-widest uppercase text-[14px]">01 — PORTFOLIO / 2026</span>
+          <span className="block md:hidden font-label-caps text-[#FFFFFF] tracking-widest uppercase text-[45px]">PORTFOLIO</span>
           <h1 className="hidden md:block font-headline-xl text-headline-xl text-white tracking-tighter select-none">
             PORTFOLIO
           </h1>
@@ -23,7 +23,7 @@ export default function Hero() {
                 
         {/* 2. ใส่ z-0 ให้เลข 01 อยู่เลเยอร์ล่างสุด */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <span className="font-headline-xl text-[180px] text-[#4FC3F7] opacity-20 leading-none">01</span>
+            <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4FC3F7] opacity-20 leading-none">01</span>
         </div>
 
         <div className="hidden md:block absolute bottom-10 left-10 z-10">
