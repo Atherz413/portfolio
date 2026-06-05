@@ -19,6 +19,7 @@
 - Left column bg: #00489f (both mobile and desktop)
 - Active nav color: #e6d100
 - Body text: #bdc8d0
+- Text on cyan: #003548 (used as text color on bg-[#4fc3f7] elements)
 
 ## Font Tokens
 - `font-headline-xl` → Syne 64px/800 (name heading)

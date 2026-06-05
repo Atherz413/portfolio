@@ -23,7 +23,7 @@ export default function Hero() {
                 
         {/* 2. ใส่ z-0 ให้เลข 01 อยู่เลเยอร์ล่างสุด */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4FC3F7] opacity-20 leading-none">01</span>
+            <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4fc3f7] opacity-20 leading-none">01</span>
         </div>
 
         <div className="hidden md:block absolute bottom-10 left-10 z-10">
@@ -34,7 +34,7 @@ export default function Hero() {
 
       {/* Right Column (70%) */}
       <section
-        className="relative w-full md:w-[70%] bg-surface-container-lowest grid-pattern flex flex-col justify-start pt-10 px-6 md:pt-16 md:px-16"
+        className="relative w-full md:w-[70%] bg-surface-container-lowest grid-pattern flex flex-col justify-start pt-10 px-6 pb-10 md:pt-16 md:px-16 md:pb-16"
       >
         <div className="absolute top-0 right-0 w-64 h-64 diagonal-accent opacity-30 pointer-events-none" />
 
@@ -102,7 +102,7 @@ export default function Hero() {
             <div className="absolute inset-0 border border-primary-container/20 translate-x-4 translate-y-4" />
 
             {/* รูปทรงหน้า (Filled Shape) - ถมสีฟ้าครามทึบทั้งหมด */}
-            <div className="absolute inset-0 bg-[#4FC3F7]" />
+            <div className="absolute inset-0 bg-[#4fc3f7]" />
         </div>
       </section>
     </div>

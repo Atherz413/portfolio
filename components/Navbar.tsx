@@ -48,7 +48,7 @@ export default function Navbar() {
               key={href}
               href={href}
               className={`font-label-caps text-[18px] uppercase tracking-widest transition-colors ${
-                isActive ? "text-[#e6d100]" : "text-[#4FC3F7] hover:text-white"
+                isActive ? "text-[#e6d100]" : "text-[#4fc3f7] hover:text-white"
               }`}
             >
               {label}

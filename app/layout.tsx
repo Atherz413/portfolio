@@ -25,11 +25,11 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Laphat Rongruangkul — Backend / Full Stack Developer",
+  title: "Laphat Rongruangkul — Backend / Software Engineer",
   description:
     "Portfolio of Laphat Rongruangkul. Production systems, backend engineering, AI-native workflow.",
   openGraph: {
-    title: "Laphat Rongruangkul — Backend / Full Stack Developer",
+    title: "Laphat Rongruangkul — Backend / Software Engineer",
     description: "Production systems, backend engineering, AI-native workflow.",
     siteName: "Laphat Portfolio",
     locale: "en_US",

@@ -6,7 +6,7 @@ export default {
         "primary-container": "#4fc3f7",
         "surface-tint": "#75d1ff",
         "on-primary-fixed-variant": "#004d67",
-        "background": "#12121f",
+
         "surface-container-lowest": "#0d0d1a",
         "on-secondary-container": "#b4b5b5",
         "surface-container": "#1e1e2c",

@@ -64,7 +64,7 @@ export default function Projects() {
         </div>
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-          <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4FC3F7] opacity-20 leading-none">
+          <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4fc3f7] opacity-20 leading-none">
             02
           </span>
         </div>

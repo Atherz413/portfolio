@@ -17,7 +17,7 @@ export default function About() {
         
         {/* เพิ่ม z-0 เพื่อส่งเลข 04 ลงไปอยู่เลเยอร์ล่างสุดด้านหลังข้อความ */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-          <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4FC3F7] opacity-20 leading-none">04</span>
+          <span className="font-headline-xl text-[162px] md:text-[180px] text-[#4fc3f7] opacity-20 leading-none">04</span>
         </div>
 
         <div className="hidden md:block absolute bottom-10 left-10 z-10">
@@ -32,12 +32,12 @@ export default function About() {
           <div className="w-12 h-[1px] bg-[#4fc3f7]" />
           <div className="w-8 h-[1px] bg-[#4fc3f7]" />
         </div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 hidden md:block">
+        <div className="absolute top-20 right-20 w-[102px] h-[102px] hidden md:block">
             {/* กรอบหลัง (Ghost Frame) - มีเฉพาะเส้นขอบ เยื้องไปทางขวาและล่าง */}
             <div className="absolute inset-0 border border-primary-container/20 translate-x-4 translate-y-4" />
             
             {/* รูปทรงหน้า (Filled Shape) - ถมสีฟ้าครามทึบทั้งหมด */}
-            <div className="absolute inset-0 bg-[#4FC3F7]" />
+            <div className="absolute inset-0 bg-[#4fc3f7]" />
         </div>
         <div className="max-w-4xl flex flex-col gap-12">
           <div>
