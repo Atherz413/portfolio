@@ -86,26 +86,11 @@ export type Skill = {
 };
 
 export const skills: Skill[] = [
-  {
-    category: "Backend",
-    items: ["Node.js", "Express", "TypeScript", "PostgreSQL", "REST API", "JWT"],
-  },
-  {
-    category: "Testing",
-    items: ["Jest", "Supertest", "Postman"],
-  },
-  {
-    category: "DevOps",
-    items: ["GitHub Actions", "Railway", "Git", "Vercel"],
-  },
-  {
-    category: "AI Workflow",
-    items: ["Claude", "ChatGPT", "Gemini", "v0.dev"],
-  },
-  {
-    category: "Previously",
-    items: ["Google Apps Script", "Google Tag Manager", "Looker Studio", "GA4"],
-  },
+  { category: "Backend", items: ["Node.js", "Express", "TypeScript", "PostgreSQL", "REST API", "JWT"] },
+  { category: "Testing", items: ["Jest", "Supertest", "Postman"] },
+  { category: "DevOps", items: ["GitHub Actions", "Railway", "Git", "CI/CD"] },
+  { category: "AI Workflow", items: ["Claude", "ChatGPT", "Gemini", "Stitch"] },
+  { category: "Martech", items: ["Google Apps Script", "JavaScript", "Google Tag Manager", "GA4", "Looker Studio", "Google Sheets", "Facebook Pixel", "Google Ads"] },
 ];
 
 export const about = {
