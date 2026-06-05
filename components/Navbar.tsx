@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-[48px] bg-[#070710] border-b border-[#4fc3f7]/20 flex items-center justify-between px-6 md:px-12">
       <span
-        className="text-white font-bold text-[18px]"
+        className="hidden md:block text-white font-bold text-[18px]"
         style={{ fontFamily: "var(--font-space-mono)" }}
       >
         Oam

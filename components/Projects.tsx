@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
@@ -9,6 +9,16 @@ export default function Projects() {
 
   const prev = () => setCurrentIndex((p) => (p - 1 + projects.length) % projects.length);
   const next = () => setCurrentIndex((p) => (p + 1) % projects.length);
+
+  const touchStartX = useRef<number>(0);
+  const handleTouchStart = (e: React.TouchEvent<HTMLElement>) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = (e: React.TouchEvent<HTMLElement>) => {
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    if (delta > 50) prev();
+    else if (delta < -50) next();
+  };
 
   return (
     <div id="projects" className="flex flex-col md:flex-row min-h-screen">
@@ -55,7 +65,7 @@ export default function Projects() {
           {/* Prev Arrow */}
           <button
             onClick={prev}
-            className="w-12 h-12 border border-[#4fc3f7] flex items-center justify-center text-[#4fc3f7] hover:bg-[#4fc3f7] hover:text-[#003548] transition-all cursor-pointer shrink-0"
+            className="hidden md:flex w-12 h-12 border border-[#4fc3f7] items-center justify-center text-[#4fc3f7] hover:bg-[#4fc3f7] hover:text-[#003548] transition-all cursor-pointer shrink-0"
           >
             ←
           </button>
@@ -63,6 +73,8 @@ export default function Projects() {
           {/* Card */}
           <article
             className="flex-1 min-w-0 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col min-h-[420px]"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             {/* Notched top-right corner */}
             <div className="absolute top-0 right-0 w-0 h-0 border-t-[24px] border-l-[24px] border-t-[#4fc3f7]/40 border-l-transparent pointer-events-none" />
@@ -135,7 +147,7 @@ export default function Projects() {
           {/* Next Arrow */}
           <button
             onClick={next}
-            className="w-12 h-12 border border-[#4fc3f7] flex items-center justify-center text-[#4fc3f7] hover:bg-[#4fc3f7] hover:text-[#003548] transition-all cursor-pointer shrink-0"
+            className="hidden md:flex w-12 h-12 border border-[#4fc3f7] items-center justify-center text-[#4fc3f7] hover:bg-[#4fc3f7] hover:text-[#003548] transition-all cursor-pointer shrink-0"
           >
             →
           </button>
