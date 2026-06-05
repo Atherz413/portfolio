@@ -33,21 +33,21 @@ export default function Hero() {
 
       {/* Right Column (70%) */}
       <section
-        className="relative w-full md:w-[70%] bg-surface-container-lowest grid-pattern flex flex-col justify-start pt-16 px-16"
+        className="relative w-full md:w-[70%] bg-surface-container-lowest grid-pattern flex flex-col justify-start pt-10 px-6 md:pt-16 md:px-16"
       >
         <div className="absolute top-0 right-0 w-64 h-64 diagonal-accent opacity-30 pointer-events-none" />
 
         <div className="max-w-3xl z-10">
           {/* Role Label */}
           <div className="mb-6">
-            <span className="font-label-caps text-label-caps text-primary-container tracking-[0.3em] text-[16px]">
+            <span className="font-label-caps text-label-caps text-primary-container tracking-[0.1em] md:tracking-[0.3em] text-[16px]">
               BACKEND / FULL STACK DEVELOPER
             </span>
             <div className="h-[1px] w-12 bg-primary-container mt-2" />
           </div>
 
           {/* Name */}
-          <h2 className="font-headline-lg mb-8 uppercase leading-none text-headline-xl">
+          <h2 className="font-headline-lg mb-8 uppercase leading-none text-[36px] sm:text-[48px] md:text-headline-xl">
             <span className="block text-on-surface font-bold">{firstName}</span>
             <span className="block">
               <span className="text-on-surface font-bold">{lastNameBody}</span>

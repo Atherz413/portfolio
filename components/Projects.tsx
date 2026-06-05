@@ -37,7 +37,7 @@ export default function Projects() {
       {/* Right Column (70%) */}
       <section className="w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col">
         {/* Section Header */}
-        <div className="px-16 pt-16 pb-4 flex items-start justify-between">
+        <div className="px-4 sm:px-8 md:px-16 pt-8 md:pt-16 pb-4 flex items-start justify-between">
           <div>
             <span className="font-label-caps text-label-caps text-[#4fc3f7] tracking-[0.3em] text-[16px]">
               SELECTED WORK
@@ -51,7 +51,7 @@ export default function Projects() {
         </div>
 
         {/* Card + Arrows */}
-        <div className="flex-1 px-16 pt-8 pb-8 flex items-center gap-4">
+        <div className="flex-1 px-4 sm:px-8 md:px-16 pt-8 pb-8 flex items-center gap-4">
           {/* Prev Arrow */}
           <button
             onClick={prev}
@@ -62,8 +62,7 @@ export default function Projects() {
 
           {/* Card */}
           <article
-            className="flex-1 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col"
-            style={{ minHeight: '420px' }}
+            className="flex-1 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col min-h-[420px]"
           >
             {/* Notched top-right corner */}
             <div className="absolute top-0 right-0 w-0 h-0 border-t-[24px] border-l-[24px] border-t-[#4fc3f7]/40 border-l-transparent pointer-events-none" />
@@ -76,7 +75,7 @@ export default function Projects() {
             </div>
 
             {/* Title */}
-            <h3 className="font-headline-lg text-headline-lg text-white mb-3">
+            <h3 className="font-headline-lg text-[22px] md:text-headline-lg text-white mb-3">
               {project.title}
             </h3>
 
@@ -108,7 +107,7 @@ export default function Projects() {
             </div>
 
             {/* Buttons */}
-            <div className="flex gap-4 mt-auto pt-6">
+            <div className="flex flex-wrap gap-4 mt-auto pt-6">
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}

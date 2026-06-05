@@ -19,23 +19,23 @@ export default function Skills() {
         </div>
       </section>
 
-      <section className="relative w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col justify-center px-16 pt-16 pb-16">
+      <section className="relative w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col justify-center px-6 pt-10 pb-10 md:px-16 md:pt-16 md:pb-16">
         <div className="absolute bottom-0 left-0 w-64 h-64 diagonal-accent opacity-30 pointer-events-none" />
         <div className="flex flex-col gap-12">
           <div>
             <span className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[16px]">WHAT I WORK WITH</span>
             <div className="h-[1px] w-12 bg-[#4fc3f7] mt-2" />
           </div>
-          <div className="grid grid-cols-2 gap-x-16 gap-y-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 md:gap-x-16 gap-y-8 md:gap-y-12">
             {skills.map((group) => (
-              <div key={group.category} className={group.category === "Martech" ? "col-span-2" : undefined}>
+              <div key={group.category} className={group.category === "Martech" ? "sm:col-span-2" : undefined}>
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-2 h-2 bg-[#4fc3f7] shrink-0" />
-                  <span className="font-label-caps text-[#4fc3f7] uppercase tracking-widest" style={{ fontSize: "20px" }}>{group.category.toUpperCase()}</span>
+                  <span className="font-label-caps text-[#4fc3f7] uppercase tracking-widest text-[20px]">{group.category.toUpperCase()}</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <span key={item} className="px-4 py-2 border border-[#4fc3f7]/20 text-[#bdc8d0] font-label-caps uppercase hover:bg-[#4fc3f7]/10 hover:text-[#4fc3f7] transition-all cursor-default" style={{ fontSize: "14px", clipPath: "polygon(0 0, 95% 0, 100% 5%, 100% 100%, 0 100%)" }}>{item}</span>
+                    <span key={item} className="px-4 py-2 border border-[#4fc3f7]/20 text-[#bdc8d0] font-label-caps uppercase hover:bg-[#4fc3f7]/10 hover:text-[#4fc3f7] transition-all cursor-default text-[14px] notch-tr">{item}</span>
                   ))}
                 </div>
               </div>

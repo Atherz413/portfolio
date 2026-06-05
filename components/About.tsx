@@ -21,7 +21,7 @@ export default function About() {
       </section>
 
       {/* Right Column */}
-      <section className="relative w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col justify-center pt-16 px-16 pb-16">
+      <section className="relative w-full md:w-[70%] bg-[#0d0d1a] cyan-grid flex flex-col justify-center pt-10 px-6 pb-10 md:pt-16 md:px-16 md:pb-16">
         <div className="hidden lg:block absolute top-8 right-8 opacity-20 space-y-1.5">
           <div className="w-16 h-[1px] bg-[#4fc3f7]" />
           <div className="w-12 h-[1px] bg-[#4fc3f7]" />
@@ -31,7 +31,7 @@ export default function About() {
         <div className="absolute bottom-20 right-20 w-32 h-32 border border-[#4fc3f7]/40 hidden md:block" />
         <div className="max-w-4xl flex flex-col gap-12">
           <div>
-            <span className="font-label-caps text-[#4fc3f7] tracking-[0.4em] uppercase text-[16px]" style={{ fontFamily: "var(--font-space-mono)" }}>WHO I AM</span>
+            <span className="font-label-caps text-[#4fc3f7] tracking-[0.4em] uppercase text-[16px]">WHO I AM</span>
             <div className="w-16 h-[1px] bg-[#4fc3f7] mt-4" />
           </div>
           <div className="space-y-8 max-w-2xl">
@@ -41,7 +41,7 @@ export default function About() {
           </div>
           <div className="flex flex-wrap gap-4">
             {about.values.map((value) => (
-              <span key={value} className="notched-corner border border-[#4fc3f7]/40 bg-[#0d0d1a] px-6 py-4 text-[#4fc3f7] hover:border-[#4fc3f7] hover:bg-[#4fc3f7]/10 transition-all cursor-default" style={{ fontFamily: "var(--font-space-mono)", fontSize: "14px" }}>{value}</span>
+              <span key={value} className="notched-corner border border-[#4fc3f7]/40 bg-[#0d0d1a] px-6 py-4 text-[#4fc3f7] hover:border-[#4fc3f7] hover:bg-[#4fc3f7]/10 transition-all cursor-default font-label-caps text-[14px]">{value}</span>
             ))}
           </div>
         </div>
