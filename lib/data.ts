@@ -4,7 +4,7 @@ export const siteConfig = {
   subTagline:
     "Transitioning from Analytics & Martech into Backend / Full Stack development — with real production systems to show for it.",
   github: "https://github.com/Atherz413",
-  linkedin: "https://www.linkedin.com/in/laphat-rongruangkul",
+  linkedin: "https://www.linkedin.com/in/laphat-rongruangkul-64a1b3288/",
   resume: "/resume.pdf",
 };
 
@@ -33,7 +33,7 @@ export const projects: Project[] = [
       "Integration tests with Jest + Supertest",
       "CI/CD pipeline via GitHub Actions → Railway",
     ],
-    liveUrl: "https://lead-management-api-production-c3ab.up.railway.app",
+    liveUrl: "https://lead-management-api-production-c3ab.up.railway.app/health",
     githubUrl: "https://github.com/Atherz413/lead-management-api",
   },
   {
