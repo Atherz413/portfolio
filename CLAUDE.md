@@ -50,7 +50,10 @@
 ## Component Structure
 - components/Navbar.tsx — smooth scroll nav, active highlight #e6d100
 - components/Hero.tsx — section 01
-- components/Projects.tsx — section 02, auto-slide 4.5s, swipe on mobile
+- components/Projects.tsx — section 02, auto-slide 4.1s, swipe on mobile
+  - Auto-play starts only when section enters viewport (IntersectionObserver, ≥10% visible)
+  - Timer resets on every manual nav (prev/next) — startTimer() called inside both handlers
+  - Slide-fade animation: key={currentIndex} on <article> + .animate-slide-fade-in in globals.css (0.75s ease-out, translateX 20px→0)
 - components/Skills.tsx — section 03
 - components/About.tsx — section 04
 - lib/data.ts — all project content data

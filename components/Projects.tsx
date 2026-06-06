@@ -19,6 +19,7 @@ export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const project = projects[currentIndex];
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const stopTimer = () => {
     if (intervalRef.current !== null) {
@@ -31,14 +32,29 @@ export default function Projects() {
     stopTimer();
     intervalRef.current = setInterval(() => {
       setCurrentIndex((p) => (p + 1) % projects.length);
-    }, 4100);
+    }, 7500);
   };
 
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { entry.isIntersecting ? startTimer() : stopTimer(); },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => { observer.disconnect(); stopTimer(); };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => { startTimer(); return stopTimer; }, []);
+  }, []);
 
-  const prev = () => setCurrentIndex((p) => (p - 1 + projects.length) % projects.length);
-  const next = () => setCurrentIndex((p) => (p + 1) % projects.length);
+  const prev = () => {
+    setCurrentIndex((p) => (p - 1 + projects.length) % projects.length);
+    startTimer();
+  };
+  const next = () => {
+    setCurrentIndex((p) => (p + 1) % projects.length);
+    startTimer();
+  };
 
   const touchStartX = useRef<number>(0);
   const handleTouchStart = (e: React.TouchEvent<HTMLElement>) => {
@@ -53,7 +69,7 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects" className="flex flex-col md:flex-row min-h-screen">
+    <div id="projects" ref={sectionRef} className="flex flex-col md:flex-row min-h-screen">
       {/* Left Column (30%) */}
       <section className="relative w-full md:w-[30%] bg-[#00489f] border-r-2 border-[#4fc3f7] flex flex-col justify-center items-center py-20 md:py-0 overflow-hidden">
         <div className="vertical-text relative z-10">
@@ -102,7 +118,8 @@ export default function Projects() {
 
           {/* Card */}
           <article
-            className="flex-1 min-w-0 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col min-h-[420px]"
+            key={currentIndex}
+            className="flex-1 min-w-0 relative border border-[#4fc3f7]/20 hover:border-[#4fc3f7]/60 transition-colors bg-[#0d0d1a] p-6 md:p-8 flex flex-col min-h-[420px] animate-slide-fade-in"
             onMouseEnter={stopTimer}
             onMouseLeave={startTimer}
             onTouchStart={handleTouchStart}
