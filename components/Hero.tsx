@@ -52,7 +52,7 @@ export default function Hero() {
             <span className="block text-on-surface font-bold">{firstName}</span>
             <span className="block">
               <span className="text-on-surface font-bold">{lastNameBody}</span>
-              <span className="text-primary-container font-bold">{lastNameAccent}</span>
+              <span className="text-on-surface font-bold font-bold">{lastNameAccent}</span>
             </span>
           </h2>
 
