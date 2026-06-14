@@ -5,7 +5,7 @@ export const siteConfig = {
     "2 years of production systems — CRM pipelines, ETL, multi-tenant data routing. — Now rebuilding the same logic with a proper backend stack.",
   github: "https://github.com/Atherz413",
   linkedin: "https://www.linkedin.com/in/laphat-rongruangkul-64a1b3288/",
-  resume: "/resume.pdf",
+  resume: "/LAPHAT_RONGRUANGKUL_Resume.pdf",
 };
 
 export type Project = {
