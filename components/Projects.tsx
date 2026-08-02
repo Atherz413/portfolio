@@ -188,7 +188,7 @@ export default function Projects() {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="skew-button skew-x-[-15deg] border border-[#4fc3f7] text-[#4fc3f7] font-label-caps px-8 py-3 font-bold inline-flex items-center"
+                  className="skew-button skew-x-[-15deg] border border-[#e6d100] text-[#e6d100] font-label-caps px-8 py-3 font-bold inline-flex items-center"
                 >
                   <span className="inline-block skew-x-[15deg]">GITHUB</span>
                 </a>
