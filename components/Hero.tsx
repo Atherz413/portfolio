@@ -42,7 +42,7 @@ export default function Hero() {
           {/* Role Label */}
           <div className="mb-6">
             <span className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[16px]">
-              SOFTWARE ENGINEER
+              ANALYTICS & DATA ENGINEER
             </span>
             <div className="h-[1px] w-12 bg-[#4fc3f7] mt-2" />
           </div>
@@ -85,13 +85,6 @@ export default function Hero() {
               className="skew-button skew-x-[-15deg] border-2 border-primary-container text-primary-container font-label-caps px-8 py-3 font-bold hover:bg-primary-container/10"
             >
               LINKEDIN
-            </a>
-            <a
-              href={siteConfig.resume}
-              download
-              className="skew-button skew-x-[-15deg] border-2 border-outline font-label-caps px-8 py-3 font-bold hover:border-on-surface"
-            >
-              <span className="text-[#e6d100]">RESUME PDF</span>
             </a>
           </div>
         </div>

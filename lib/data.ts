@@ -5,7 +5,6 @@ export const siteConfig = {
     "2 years of production systems — CRM pipelines, ETL, multi-tenant data routing. — Now shipped — Node.js/PostgreSQL API + React frontend, both in production.",
   github: "https://github.com/Atherz413",
   linkedin: "https://www.linkedin.com/in/laphat-rongruangkul-64a1b3288/",
-  resume: "/LAPHAT_RONGRUANGKUL_Resume.pdf",
 };
 
 export type Project = {
@@ -117,8 +116,7 @@ export const skills: Skill[] = [
 export const about = {
   story: [
     "I spent 2 years building production data systems at a digital marketing agency — CRM pipelines, ETL jobs, tracking implementations — all in Google Apps Script and JavaScript.",
-    "The work was backend engineering in everything but name: state management, conflict resolution, audit logging, multi-tenant data routing. I just didn't have the job title.",
-    "I've since rebuilt those same systems with a proper backend stack — Node.js, PostgreSQL, TypeScript — and shipped a React frontend on top.",
+    "I've since expanded into proper backend engineering — rebuilt those same systems with Node.js, PostgreSQL, and TypeScript, and shipped a React frontend on top.",
   ],
   values: ["Production systems over tutorials", "Debugs before asking for help", "Ownership mindset"],
 };
