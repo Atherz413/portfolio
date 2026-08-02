@@ -131,7 +131,11 @@ export default function Projects() {
             {/* Badge */}
             <div className="mb-4">
               <span className="font-label-caps text-label-caps bg-[#4fc3f7]/10 text-[#4fc3f7] border border-[#4fc3f7]/20 px-3 py-1 inline-block">
-                {project.type === "backend" ? "BACKEND PROJECT" : "PRODUCTION SYSTEM"}
+                {project.type === "backend"
+                  ? "BACKEND PROJECT"
+                  : project.type === "frontend"
+                  ? "FRONTEND PROJECT"
+                  : "PRODUCTION SYSTEM"}
               </span>
             </div>
 

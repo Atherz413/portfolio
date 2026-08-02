@@ -42,7 +42,7 @@ export default function Hero() {
           {/* Role Label */}
           <div className="mb-6">
             <span className="font-label-caps text-[#4fc3f7] tracking-widest uppercase text-[16px]">
-              BACKEND / SOFTWARE ENGINEER
+              SOFTWARE ENGINEER
             </span>
             <div className="h-[1px] w-12 bg-[#4fc3f7] mt-2" />
           </div>

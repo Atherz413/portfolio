@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Laphat Rongruangkul",
   tagline: "I build backend systems, test them properly, and ship to production.",
   subTagline:
-    "2 years of production systems — CRM pipelines, ETL, multi-tenant data routing. — Now rebuilding the same logic with a proper backend stack.",
+    "2 years of production systems — CRM pipelines, ETL, multi-tenant data routing. — Now shipped — Node.js/PostgreSQL API + React frontend, both in production.",
   github: "https://github.com/Atherz413",
   linkedin: "https://www.linkedin.com/in/laphat-rongruangkul-64a1b3288/",
   resume: "/LAPHAT_RONGRUANGKUL_Resume.pdf",
@@ -11,7 +11,7 @@ export const siteConfig = {
 export type Project = {
   id: string;
   title: string;
-  type: "backend" | "production";
+  type: "backend" | "frontend" | "production";
   stack: string[];
   description: string;
   highlights: string[];
@@ -35,8 +35,23 @@ export const projects: Project[] = [
       "CI/CD pipeline via GitHub Actions → Railway",
     ],
     featuredHighlight: "CI/CD pipeline via GitHub Actions → Railway",
-    liveUrl: "https://lead-management-api-production-c3ab.up.railway.app/health",
     githubUrl: "https://github.com/Atherz413/lead-management-api",
+  },
+  {
+    id: "lead-frontend",
+    title: "Lead Management Dashboard",
+    type: "frontend",
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router"],
+    description:
+      "A frontend dashboard connecting to the Lead Management API — handles JWT auth, displays the full lead table, and lets managers create and assign leads inline without leaving the page.",
+    highlights: [
+      "JWT auth with protected routes and localStorage token persistence",
+      "Parallel data fetching (leads + users) via Promise.all — single loading state",
+      "Inline lead assignment: dropdown + PATCH to API with optimistic refresh",
+      "Status badge system with color-coded lead states (new → closed_won / closed_lost)",
+    ],
+    featuredHighlight: "Parallel data fetching (leads + users) via Promise.all — single loading state",
+    githubUrl: "https://github.com/Atherz413/lead-frontend",
   },
   {
     id: "crm-pipeline",
@@ -92,8 +107,9 @@ export type Skill = {
 
 export const skills: Skill[] = [
   { category: "Backend", items: ["Node.js", "Express", "TypeScript", "PostgreSQL", "REST API", "JWT"] },
+  { category: "Frontend", items: ["React", "TypeScript", "React Router", "Vite"] },
   { category: "Testing", items: ["Jest", "Supertest", "Postman"] },
-  { category: "DevOps", items: ["GitHub Actions", "Railway", "Git", "CI/CD"] },
+  { category: "DevOps", items: ["GitHub Actions", "Railway", "Vercel", "Git", "CI/CD"] },
   { category: "AI-ASSISTED DEV", items: ["Claude", "ChatGPT", "Gemini", "Stitch"] },
   { category: "Martech", items: ["Google Apps Script", "JavaScript", "Google Tag Manager", "GA4", "Looker Studio", "Google Sheets", "Facebook Pixel", "Google Ads"] },
 ];
@@ -102,7 +118,7 @@ export const about = {
   story: [
     "I spent 2 years building production data systems at a digital marketing agency — CRM pipelines, ETL jobs, tracking implementations — all in Google Apps Script and JavaScript.",
     "The work was backend engineering in everything but name: state management, conflict resolution, audit logging, multi-tenant data routing. I just didn't have the job title.",
-    "I'm now rebuilding those same systems with a proper backend stack — Node.js, PostgreSQL, TypeScript — and learning the infrastructure layer that Apps Script couldn't give me.",
+    "I've since rebuilt those same systems with a proper backend stack — Node.js, PostgreSQL, TypeScript — and shipped a React frontend on top.",
   ],
   values: ["Production systems over tutorials", "Debugs before asking for help", "Ownership mindset"],
 };
