@@ -36,7 +36,7 @@ export default function Skills() {
               <div key={group.category} className={group.category === "Martech" ? "sm:col-span-2" : undefined}>
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-2 h-2 bg-[#4fc3f7] shrink-0" />
-                  <span className={`font-label-caps uppercase tracking-widest text-[20px] ${group.category === "Backend" ? "text-[#e6d100]" : "text-[#4fc3f7]"}`}>{group.category.toUpperCase()}</span>
+                  <span className={`font-label-caps uppercase tracking-widest text-[20px] ${group.category === "Backend" || group.category === "Frontend" ? "text-[#e6d100]" : "text-[#4fc3f7]"}`}>{group.category.toUpperCase()}</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (

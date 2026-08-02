@@ -32,9 +32,9 @@ export const projects: Project[] = [
       "Transactional lead assignment with conflict resolution",
       "Immutable audit log for every state change",
       "Integration tests with Jest + Supertest",
-      "CI/CD pipeline via GitHub Actions → Railway",
+      "CI/CD pipeline via GitHub Actions → Render",
     ],
-    featuredHighlight: "CI/CD pipeline via GitHub Actions → Railway",
+    featuredHighlight: "CI/CD pipeline via GitHub Actions → Render",
     githubUrl: "https://github.com/Atherz413/lead-management-api",
   },
   {
@@ -109,7 +109,7 @@ export const skills: Skill[] = [
   { category: "Backend", items: ["Node.js", "Express", "TypeScript", "PostgreSQL", "REST API", "JWT"] },
   { category: "Frontend", items: ["React", "TypeScript", "React Router", "Vite"] },
   { category: "Testing", items: ["Jest", "Supertest", "Postman"] },
-  { category: "DevOps", items: ["GitHub Actions", "Railway", "Vercel", "Git", "CI/CD"] },
+  { category: "DevOps", items: ["GitHub Actions", "Render", "Vercel", "Git", "CI/CD"] },
   { category: "AI-ASSISTED DEV", items: ["Claude", "ChatGPT", "Gemini", "Stitch"] },
   { category: "Martech", items: ["Google Apps Script", "JavaScript", "Google Tag Manager", "GA4", "Looker Studio", "Google Sheets", "Facebook Pixel", "Google Ads"] },
 ];
